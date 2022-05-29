@@ -1,0 +1,17 @@
+{% extends "boilerplate.html" %} {% block content %}
+
+<div class="card">
+    <div class="card-body">
+        <h1 class="card-title p-2">Results</h1>
+        <p class="card-subtitle mb-2 text-muted  p-2 disclaimer">⚠ Do remember this was made by students.</p>
+
+        {% if res %}
+        <p class="card-text  p-2 result">The model predicted you are at <span class="bad"> higher risk</span> of cardiovascular disease. </p>
+        {% else %}
+        <p class="card-text  p-2 result">The model predicted you at <span class="good">lower risk</span> of cardiovascular disease.</p>
+        {% endif %}
+        <br>
+        <p><a href="/" class="btn btn-light neutral">Try Again</a></p>
+    </div>
+</div>
+{% endblock %}

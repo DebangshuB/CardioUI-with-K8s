@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ml-api-service
+spec:
+  selector:
+    app: cardioui
+    type: ml-api
+  type: ClusterIP
+  ports:
+    - protocol: TCP
+      port: 8001
+      targetPort: 8001

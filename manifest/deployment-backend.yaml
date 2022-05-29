@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cardioui
+      type: backend
+  template:
+    metadata:
+      labels:
+        app: cardioui
+        type: backend
+    spec:
+      containers:
+        - name: backend
+          image: "debangshubh/cardioui-backend:1.0"
+          env:
+            - name: ML_SERVER_ENDPOINT
+              value: "ml-api-service.default"

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" data-theme='light'>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Check if you are at risk of a Cardiovascular disease. This is a project made by students which uses machine learning to make predictions regarding your heart health.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/index.css">
+    <link rel="shortcut icon" href="../static/favicon/favicon.ico?v=1" type="image/x-icon" /> {% if title %}
+
+    <title>Cardiac Health : {{title}}</title>
+    {% else %}
+    <title>Cardiac Health</title>
+    {% endif %}
+
+</head>
+
+<body>
+    {% block content %}{% endblock %}
+</body>
+<script defer src="../static/theme.js"></script>
+
+</html>
